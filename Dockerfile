@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:11
 
 # Set the location of the verticles
 ENV APP_HOME /usr/app
@@ -11,7 +11,7 @@ COPY target/*.jar $APP_HOME/app.jar
 COPY bin/entrypoint.sh $APP_HOME/bin/entrypoint.sh
 RUN chmod a+x $APP_HOME/bin/entrypoint.sh
 #add data for timezone if not we can not get correct date time
-RUN apk add --no-cache tzdata curl
+#RUN apk add --no-cache tzdata curl
 ENV TZ Asia/Ho_Chi_Minh
 
 # Launch the verticle
