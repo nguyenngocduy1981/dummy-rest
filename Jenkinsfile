@@ -1,20 +1,21 @@
 pipeline {
-	agent any
-	stages {
-		stage("build") {
-			steps {
-				echo 'Dang build app nhe'
-			}
-		}
-		stage("test") {
-			steps {
-				echo 'Dang test app nhe'
-			}
-		}
-		stage("deploy") {
-			steps {
-				echo 'Dang deploy app nhe'
-			}
-		}
-	}
+ agent any
+ stages {
+ 	stage("Build") {
+ 		steps {
+ 			echo 'dang build roi nhe'
+ 		}
+ 	}
+ 	stage("Test") {
+ 		steps {
+ 			echo 'dang Test roi nhe'
+ 		}
+ 	}
+ 	stage("Deploy") {
+ 		steps {
+ 			echo 'dang Deploy roi nhe'
+ 		}
+ 	}
+ 	
+ }   
 }
